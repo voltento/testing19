@@ -11,9 +11,12 @@ You need to have go 1.14 or greater installed for running the tests.
 Complexity: time complexity O(n)=2N+M, space complexity: not grater than 2N+M
 Where N is amount of age values and M is max age == 250
 Time complexity explanation:
+ 
 Step 1: We use an array for storing persons' age. Saving all ages takes N time.
+
 Step 2: We iterate from minYear to MaxYear in worst case it takes MaxYears iterations.
 We can get extra iteration for each age value, in worst case it's N - amount of persons' age
+
 Step 3: Parse data into string, is linear
 
 # Assumptions
