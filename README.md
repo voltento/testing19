@@ -19,6 +19,8 @@ We can get extra iteration for each age value, in worst case it's N - amount of 
 
 Step 3: Parse data into string, is linear
 
+[Algorithm implementation is available here](app/processor/processor.go)
+
 # Assumptions
 - Age must be in the rage [0, 250)
 - Amount of values for ages always must be equal and more than 0
