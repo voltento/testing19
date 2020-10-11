@@ -5,9 +5,6 @@ TODO:
     - run app in docker
 -   Write code
     - data connector
-        - read data from console
-            - interactive mode
-            - read data from file
         - tests
             - wrong format
                 - empty data
