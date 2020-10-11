@@ -4,11 +4,7 @@ TODO:
     - run tests
     - run app in docker
 -   Write code
-    - data connector
-        - tests
-            - wrong format
-                - empty data
-                - wrong symbols
+    - use hex sorting
 -   Documentation
     - assumptions
         - equal ages
@@ -18,7 +14,14 @@ TODO:
     - complexity explanation
 - Grammatical check
     
+# How to use
+Call in a warking directory `make run` and follow the instructions. 
+The app will be started in a docker environment.
+
+Also, you can  
+
+
 # Assumptions
-- For empty data return empty answer
+- Age cannot be greater than 250
             
     

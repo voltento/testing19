@@ -16,6 +16,8 @@ func NewOrderMaker() *OrderMaker {
 /// The function orders data into queue base on merging two sorted arrays.
 /// It returns "No" if the order can not be reached or amount of items isn't equal for both slices.
 /// It returns ordered slice in string representation if ordered successfully.
+/// Complexity: time complexity not longer than 2*N*log(N), space complexity: not grater than 2*N.
+/// Where N is amount of age values
 func (p *OrderMaker) Process(first []int, second []int) string {
 	ordered := p.order(first, second)
 	if ordered == nil {
@@ -47,6 +49,7 @@ func (p *OrderMaker) order(first []int, second []int) []int {
 		return nil
 	}
 
+	// Sort for N*log(N)
 	sort.Ints(first)
 	sort.Ints(second)
 	index := 0
