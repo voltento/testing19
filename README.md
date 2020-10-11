@@ -1,17 +1,6 @@
 TODO:
--   Exec app in a docker
--   Makefile
-    - run tests
-    - run app in docker
 -   Write code
     - use hex sorting
--   Documentation
-    - assumptions
-        - equal ages
-        - a different amount of men and women
-    - how to run
-    - how to test
-    - complexity explanation
 - Grammatical check
     
 # How to use
@@ -26,5 +15,6 @@ You need to have go 1.14 or greater installed for running the tests.
 
 # Assumptions
 - Age cannot be greater than 250
+- Amount of values for ages always must be equal and more than 0
             
     
