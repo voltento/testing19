@@ -51,6 +51,8 @@ func (p *OrderMaker) intsToString(data []int) string {
 	}
 	return strings.Trim(answer, " ")
 }
+
+/// Ordering data by counting sort
 func (p *OrderMaker) order(first []int, second []int) ([]int, error) {
 	if len(first) != len(second) {
 		return nil, errors.New("data sets have unequal length")
