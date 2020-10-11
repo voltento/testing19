@@ -23,6 +23,6 @@ Step 3: Parse data into string, is linear
 
 # Assumptions
 - Age must be in the rage [0, 250)
-- Amount of values for ages always must be equal and more than 0
+- Both set of ages must have the same length which is not equal to 0
             
     
