@@ -54,6 +54,7 @@ func TestOrderMaker_BothEmpty(t *testing.T) {
 
 func TestOrderMaker_Correct(t *testing.T) {
 	doTest(t, []int{1, 3}, []int{2, 5}, "1 2 3 5")
+	doTest(t, []int{1, 3}, []int{2, 249}, "1 2 3 249")
 	doTest(t, []int{0, 3}, []int{2, 5}, "0 2 3 5")
 	doTest(t, []int{3, 1, 6}, []int{7, 2, 5}, "1 2 3 5 6 7")
 	doTest(t, []int{4, 2, 8, 6, 10}, []int{1, 3, 9, 7, 5}, "1 2 3 4 5 6 7 8 9 10")
