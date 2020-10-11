@@ -2,10 +2,10 @@ package main
 
 import (
 	"github.com/pkg/errors"
+	"github.com/voltento/testing19/app/processor"
+	"github.com/voltento/testing19/app/repository"
 	"log"
 	"os"
-	"testing19/app/processor"
-	"testing19/app/repository"
 )
 
 func main() {
