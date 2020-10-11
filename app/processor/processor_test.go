@@ -21,17 +21,24 @@ func doTest(t *testing.T, first, second []int, expect string) {
 		for nextSecondPerm {
 			processor := NewOrderMaker()
 			result := processor.Process(first, second)
-			assert.Equal(t, result, expect)
+			assert.Equal(t, expect, result)
 
 			result = processor.Process(second, first)
-			assert.Equal(t, result, expect)
+			assert.Equal(t, expect, result)
 
 			nextSecondPerm = secondPerm.Next()
 		}
 
 		nextFirstPerm = firstPerm.Next()
 	}
+}
 
+func TestOrderMaker_SandBox(t *testing.T) {
+	doTest(t, []int{1, 2}, []int{1, 4}, "1 1 2 4")
+}
+
+func TestOrderMaker_OutOfRane(t *testing.T) {
+	doTest(t, []int{1, 2}, []int{1, 250}, No)
 }
 
 func TestOrderMaker_DiffLength(t *testing.T) {

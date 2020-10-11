@@ -12,9 +12,8 @@ The app will be started in a docker environment.
 Call in a warking directory `make test`. It will start tests locally.
 You need to have go 1.14 or greater installed for running the tests. 
 
-
 # Assumptions
-- Age cannot be greater than 250
+- Age must be in the rage [0, 250)
 - Amount of values for ages always must be equal and more than 0
             
     
