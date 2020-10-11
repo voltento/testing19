@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"github.com/pkg/errors"
 	"github.com/voltento/testing19/app/processor"
 	"github.com/voltento/testing19/app/repository"
@@ -9,9 +10,9 @@ import (
 )
 
 func main() {
-	var r repository.Repository
+	provider := repository.NewConsole()
 
-	men, women, err := r.Ages()
+	maleAges, femaleAges, err := provider.Provide()
 	if err != nil {
 		err = errors.Wrap(err, "can not load ages")
 		log.Print(err.Error())
@@ -19,6 +20,6 @@ func main() {
 	}
 
 	p := processor.NewOrderMaker()
-	answer := p.Process(men, women)
-	log.Println(answer)
+	answer := p.Process(maleAges, femaleAges)
+	fmt.Print(answer)
 }
