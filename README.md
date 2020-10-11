@@ -15,10 +15,13 @@ TODO:
 - Grammatical check
     
 # How to use
+## Run app
 Call in a warking directory `make run` and follow the instructions. 
 The app will be started in a docker environment.
 
-Also, you can  
+## Run tests
+Call in a warking directory `make test`. It will start tests locally.
+You need to have go 1.14 or greater installed for running the tests. 
 
 
 # Assumptions
