@@ -1,4 +1,11 @@
-FROM golang
+FROM golang:alpine as builder
+
+ARG project_dir
+
+RUN mkdir $GOPATH/src/project_dir
+
+COPY . $GOPATH/src/project_dir
+WORKDIR $GOPATH/src/project_dir
 
 # Set necessary environmet variables needed for our image
 ENV GO111MODULE=on \
@@ -6,14 +13,11 @@ ENV GO111MODULE=on \
     GOOS=linux \
     GOARCH=amd64
 
-# Move to working directory /build
-WORKDIR /build
-COPY app app
-COPY go.mod .
-COPY go.sum .
-RUN go build -o main app/main.go
+RUN go build -v -o main app/main.go
+RUN cp main /main
 
+FROM golang:alpine as production
 # Run app
 WORKDIR /app
-RUN cp /build/main app
-CMD ["/app/app"]
+COPY --from=builder /main /app/app
+ENTRYPOINT ["/app/app"]
